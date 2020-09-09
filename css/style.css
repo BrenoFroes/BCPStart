@@ -16,10 +16,31 @@
     font-weight: normal;
 }
 
+
+
 body{
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     font-family: Sora;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+html {
+    --scrollbarBG: #DCDCDC	;
+    --thumbBG: #3D5165;
+}
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
 }
 
 /* fim geral  */
@@ -65,7 +86,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 670px;
+    height:100vh;
 }
 
 .btn-eContato{
@@ -89,14 +110,15 @@ h2.titulo-head{
     font-size: 2.7rem;
     text-align: center;
     color: #F2F2F2;
+    cursor:pointer !important;
 }
 
-h2.titulo-head-2{
-    z-index: 0;
-    padding: 10px;
-    position: relative;
-    left: 0%;
-    top: 31.5%;
+h2.titulo-head:after{
+    content:'PRESS START';
+    z-index: -1;
+    position: absolute;
+    left: 34.5%;
+    top: 23%;
     font-family: "PressStart2P", PressStart2P, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -105,11 +127,22 @@ h2.titulo-head-2{
     background: linear-gradient(90deg, #2B3E47 15%, #FF5722 50.14%, #309A8C 85%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    cursor:pointer !important;
+
+}
+
+h2.titulo-head-2{
+
 }
 
 .section-1{
-    height: 765px;
-    background: #FAFAFA;
+    height: 100vh;
+    width: 100%;
+    background-color: #FAFAFA !important;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -121,7 +154,31 @@ h2.titulo-head-2{
 
 @media (min-width:768px){
     /* For desktop: */
-    
+    .section1Oquee{
+        font-family:PressStart2P;
+        font-size:2.5rem;
+        color:#828282;
+        background-color: #FAFAFA !important;
+    }
+
+    .sectionTitleArea{
+        background-color: #FAFAFA !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:5%;
+    }
+
+    .section1TextArea{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section1Text{
+        text-align: justify;
+        width: 30%;
+    }
     
     .btn-eContato{
         border-radius: 0;
@@ -130,6 +187,17 @@ h2.titulo-head-2{
         padding: 20px;
         background-color: white;
         color: gray;
+        transition: background-color 200ms linear;
+    }
+
+    .btn-eContato-scrolled{
+        border-radius: 0;
+        font-size: 12px;
+        margin-top: -20px;
+        padding: 20px;
+        background-color:  #3D5165;
+        color: white;
+        transition: background-color 200ms linear;
     }
 
 }
@@ -147,6 +215,12 @@ h2.titulo-head-2{
 
     .bg-light {
         background-color: transparent !important;
+        transition: background-color 200ms linear;
+    }
+
+    .bg-light-scrolled {
+        background-color: #F2F2F2 !important;
+        transition: background-color 200ms linear;
     }
     
     .trn {
@@ -161,5 +235,18 @@ h2.titulo-head-2{
         color: #ffffff !important;
         font-weight: 300;
         font-size: 12px;
+        transition: background-color 200ms linear;
+
+    }
+
+    .nav-link-scrolled{
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
+        margin: .5rem;
+        color: #828282 !important;
+        font-weight: 300;
+        font-size: 12px;
+        transition: background-color 200ms linear;
+
     }
 }

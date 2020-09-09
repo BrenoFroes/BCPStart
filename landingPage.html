@@ -1,54 +1,108 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="pt-br" style=" scroll-behavior: smooth !important;">
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
-
     <link rel="stylesheet" href="css/style.css"/>
     <!-- Bootstrap CSS -->
     <title>Hello, world!</title>
-  </head>
-  <body>
-    <!-- Menu -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light trn">
-      <a class="navbar-brand" href="#">
+</head>
+<body>
+<!-- Menu -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light trn" id="nav">
+    <a class="navbar-brand" href="#">
         <img src="images/logo.svg" class="navbar-logo" width="200" height="200" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">O QUE É?</a>
-          <a class="nav-item nav-link" href="#">COMO FUNCIONA</a>
-          <a class="nav-item nav-link" href="#">ATUAÇÃO JURÍDICA</a>
-          <a class="nav-item nav-link" href="#">PARCERIAS</a>
-          <a class="nav-item nav-link" href="#">QUEM SOMOS?</a>
-          <a class="nav-item nav-link" href="#">QUEM ENTROU NO JOGO?</a>
-          <a class="nav-item nav-link" href="#">
-            <button type="button" class="btn btn-light btn-eContato">ENTRAR EM CONTATO</button>
-          </a>
+            <a class="nav-item nav-link" href="#section1">O QUE É?</a>
+            <a class="nav-item nav-link" href="#">COMO FUNCIONA</a>
+            <a class="nav-item nav-link" href="#">ATUAÇÃO JURÍDICA</a>
+            <a class="nav-item nav-link" href="#">PARCERIAS</a>
+            <a class="nav-item nav-link" href="#">QUEM SOMOS?</a>
+            <a class="nav-item nav-link" href="#">QUEM ENTROU NO JOGO?</a>
+            <a class="nav-item nav-link" href="#">
+                <button type="button" class="btn btn-light btn-eContato">ENTRAR EM CONTATO</button>
+            </a>
         </div>
-      </div>
-    </nav>
+    </div>
+</nav>
 
 
-   <div class="head">
-     <h2 class="titulo-head">
-       PRESS START
-     </h2>
-     <h2 class="titulo-head-2">
-       PRESS START
-     </h2>
-   </div>
+<div class="head">
+    <h2 style="cursor:pointer" class="titulo-head">
+        PRESS START
+    </h2>
+</div>
 
-   <div class="section-1">
+<div class="section-1" id="section1">
+    <div style="width: 50%;margin-top:10%;text-align: center">
+        <span class="section1Oquee" style="opacity: 0">O que é?</span>
+        <div style="width:40%;margin-top:5%;text-align: justify;margin-left:30%;">
+            <span class="section1Texto" style="opacity: 0">Identificando a necessidade de apoio jurídico especializado em startups, desenvolvemos o modelo BCP START para oferecer uma assessoria jurídica 360º para as Startups e ambientes de inovação, atendendo as necessidades e as demandas enfrentadas no ecossistema empreendedor. Assim, o escritório atua em todas as etapas do desenvolvimento empresarial, desde a gestação da ideia até a manutenção do legado que o empreendimento trará para a sociedade. Por meio de uma busca ativa das demandas e de um escaneamento jurídico completo da Startup, as questões jurídicas e burocráticas são dirimidas, enquanto o empreendedor se preocupa apenas em ser a mente criativa, focado no core business.</span>
+        </div>
+    </div>
+    <div style="width: 40%;margin-top:10%">
+    </div>
+</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js"></script>
+<script>
+    function changeMenuColor() {
+        let janela = $(window).scrollTop();
+        let nav = $('#nav');
+        let navLink = $('.nav-link');
+        let btnContato = $('.btn-eContato');
+        if (janela == 0) {
+            nav.removeClass('bg-light-scrolled');
+            nav.addClass('bg-light');
+            navLink.removeClass('nav-link-scrolled');
+            btnContato.removeClass('btn-eContato-scrolled');
+            return;
+        }
+        nav.removeClass('bg-light');
+        nav.addClass('bg-light-scrolled');
+        navLink.addClass('nav-link-scrolled');
+        btnContato.addClass('btn-eContato-scrolled');
+    }
 
-   </div>
-  </body>
+    function isElementVisible(elem,ms) {
+        const ref = $(elem);
+        if (ref.visible()) {
+            ref.animate({opacity: 1}, ms);
+        }
+    }
+
+
+    function blink(elem,ms){
+        const ref = $(elem);
+        setInterval(()=>{
+          if(ref.is(':visible')) return ref.hide();
+          ref.show();
+        },ms);
+    }
+
+
+    $(document).ready(()=>{
+      blink('.titulo-head',500);
+    })
+    $(document).scroll(() => {
+        changeMenuColor();
+        isElementVisible('.section1Oquee',1000);
+        isElementVisible('.section1Texto',1200);
+
+    });
+
+    window.scroll({behavior: "smooth"});
+</script>
 </html>
