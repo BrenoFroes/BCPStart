@@ -14,7 +14,7 @@
 <!-- Menu -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light trn" id="nav">
     <a class="navbar-brand" href="#">
-        <img src="images/logo.svg" class="navbar-logo" width="200" height="200" alt="">
+        <img src="images/logoBranco.svg" class="navbar-logo" width="200" height="200" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,9 +43,9 @@
 </div>
 
 <div class="section-1" id="section1">
-    <div style="width: 50%;margin-top:10%;text-align: center">
-        <span class="section1Oquee" style="opacity: 0">O que é?</span>
-        <div style="width:60%;margin-top:5%;text-align: justify;margin-left:30%;">
+    <div class="section-1-left">
+        <span class="section-1-title">O que é?</span>
+        <div class="section-1-text">
             <span class="section1Texto" style="opacity: 0">Identificando a necessidade de apoio jurídico especializado em startups, desenvolvemos o modelo BCP START para oferecer uma assessoria jurídica 360º para as Startups e ambientes de inovação, atendendo as necessidades e as demandas enfrentadas no ecossistema empreendedor. Assim, o escritório atua em todas as etapas do desenvolvimento empresarial, desde a gestação da ideia até a manutenção do legado que o empreendimento trará para a sociedade. Por meio de uma busca ativa das demandas e de um escaneamento jurídico completo da Startup, as questões jurídicas e burocráticas são dirimidas, enquanto o empreendedor se preocupa apenas em ser a mente criativa, focado no core business.</span>
         </div>
     </div>
@@ -63,17 +63,20 @@
         let nav = $('#nav');
         let navLink = $('.nav-link');
         let btnContato = $('.btn-eContato');
+        let logoMenu = $('.navbar-logo');
         if (janela == 0) {
             nav.removeClass('bg-light-scrolled');
             nav.addClass('bg-light');
             navLink.removeClass('nav-link-scrolled');
             btnContato.removeClass('btn-eContato-scrolled');
+            logoMenu.attr('src','images/logoBranco.svg');
             return;
         }
         nav.removeClass('bg-light');
         nav.addClass('bg-light-scrolled');
         navLink.addClass('nav-link-scrolled');
         btnContato.addClass('btn-eContato-scrolled');
+        logoMenu.attr('src','images/logoGradiente.svg');
     }
 
     function isElementVisible(elem,ms) {
