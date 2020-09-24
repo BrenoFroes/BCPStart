@@ -37,7 +37,7 @@
 
 
 <div class="head">
-    <h2 style="cursor:pointer" class="titulo-head">
+    <h2 onclick="window.location.href = '#section1'" style="cursor:pointer" class="titulo-head">
         PRESS START
     </h2>
 </div>
@@ -45,8 +45,12 @@
 <div class="section-1" id="section1">
     <div class="section-1-left">
         <span class="section-1-title">O que é?</span>
-        <div class="section-1-text">
-            <span class="section1Texto" style="opacity: 0">Identificando a necessidade de apoio jurídico especializado em startups, desenvolvemos o modelo BCP START para oferecer uma assessoria jurídica 360º para as Startups e ambientes de inovação, atendendo as necessidades e as demandas enfrentadas no ecossistema empreendedor. Assim, o escritório atua em todas as etapas do desenvolvimento empresarial, desde a gestação da ideia até a manutenção do legado que o empreendimento trará para a sociedade. Por meio de uma busca ativa das demandas e de um escaneamento jurídico completo da Startup, as questões jurídicas e burocráticas são dirimidas, enquanto o empreendedor se preocupa apenas em ser a mente criativa, focado no core business.</span>
+        <div class="section-1-text" style="opacity: 0">
+            <span class="section1Texto" style="opacity: 0">
+                <p>Identificando a necessidade de <b>apoio jurídico</b> especializado em startups, desenvolvemos o modelo <b>BCP START</b> para oferecer uma <b>assessoria jurídica 360º</b> para as Startups e ambientes de inovação, atendendo as necessidades e as demandas enfrentadas no ecossistema empreendedor.</p>
+                <p>Assim, o escritório atua em todas as etapas do desenvolvimento empresarial, desde a gestação da ideia até a manutenção do <b>legado</b> que o empreendimento trará para a sociedade.</p>
+                <p>Por meio de uma busca ativa das demandas e de um escaneamento jurídico completo da Startup, as questões jurídicas e burocráticas são dirimidas, enquanto o empreendedor se preocupa apenas em ser a <b>mente criativa</b>, focado no <b>core business</b>.</p>
+            </span>
         </div>
     </div>
     <div style="width: 40%;margin-top:10%">
@@ -79,7 +83,7 @@
         logoMenu.attr('src','images/logoGradiente.svg');
     }
 
-    function isElementVisible(elem,ms) {
+    function isElementVisible(elem,ms,arg) {
         const ref = $(elem);
         if (ref.visible()) {
             ref.animate({opacity: 1}, ms);
@@ -101,8 +105,8 @@
     })
     $(document).scroll(() => {
         changeMenuColor();
-        isElementVisible('.section1Oquee',1000);
-        isElementVisible('.section1Texto',1200);
+        isElementVisible('.section-1-title',1000);
+        isElementVisible('.section-1-text',1200);
 
     });
 

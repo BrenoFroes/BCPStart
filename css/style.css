@@ -1,6 +1,7 @@
 /* For mobile phones: */
 
 /* geral */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @font-face {
     font-family: Sora;
@@ -153,14 +154,22 @@ h2.titulo-head-2{
 }
 
 .section-1-title{
-    opacity: 1;
+    font-family:PressStart2P;
+    font-size:2.5rem;
+    color:#828282;
+    background-color: #FAFAFA !important;
+    opacity:0;
 }
 
 .section-1-text{
-    width:40%;
+    width:70%;
     margin-top:5%;
     text-align: left;
     margin-left:30%;
+    color:#828282;
+    font-family: 'Sora',sans-serif !important;
+    font-style: normal;
+    font-weight: 300;
 }
 
 @media only screen and (min-width: 600px) {
