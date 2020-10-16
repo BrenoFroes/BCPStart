@@ -27,6 +27,10 @@ body{
     scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
 
+p{
+    font-family: Sora;
+}
+
 html {
     --scrollbarBG: #DCDCDC	;
     --thumbBG: #3D5165;
@@ -91,13 +95,27 @@ body::-webkit-scrollbar-thumb {
     height:100vh;
 }
 
+.img-responsive{
+    max-width: 100%;
+}
 .btn-eContato{
     border-radius: 0;
     font-size: 12px;
     margin-top: -20px;
     padding: 20px;
-    background-color: gray;
+    background-color: white;
+    color: gray;
+    transition: background-color 200ms linear;
+}
+
+.btn-eContato-scrolled{
+    border-radius: 0;
+    font-size: 12px;
+    margin-top: -20px;
+    padding: 20px;
+    background-color:  #3D5165;
     color: white;
+    transition: background-color 200ms linear;
 }
 
 h2.titulo-head{
@@ -119,14 +137,14 @@ h2.titulo-head:after{
     content:'PRESS START';
     z-index: -1;
     position: absolute;
-    left: 34.5%;
+    left: 38%;
     top: 23%;
     font-family: "PressStart2P", PressStart2P, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 2.7rem;
     text-align: center;
-    background: linear-gradient(90deg, #2B3E47 15%, #FF5722 50.14%, #309A8C 85%);
+    background: linear-gradient(90deg,  #2B3E47 -5.17%, #D13B95 50.14%, #309A8C 85%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor:pointer !important;
@@ -138,7 +156,8 @@ h2.titulo-head-2{
 }
 
 .section-1{
-    height: 100vh;
+    height: auto;
+    max-height: 100vh;
     width: 100%;
     background-color: #FAFAFA !important;
     display:flex;
@@ -148,45 +167,49 @@ h2.titulo-head-2{
 }
 
 .section-2{
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #3D5165 !important;
     display:flex;
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
+    text-align: center;
 }
 
-.section-1-left{
-    width: 40%;
-    margin-top:10%;
-    text-align: center
+.section-2 > div > div>.img-responsive{
+    width: 100%;
 }
 
 .section-1-title{
     font-family:PressStart2P;
-    font-size:2.5rem;
+    font-size:2.0rem;
     color:#828282;
     background-color: #FAFAFA !important;
     opacity:0;
+    text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
 .section-1-text{
-    width:70%;
-
-    text-align: left;
-    margin-left:30%;
     color:#828282;
     font-family: 'Sora',sans-serif !important;
     font-style: normal;
     font-weight: 300;
     font-size: 1.1rem;
+    text-align: left;
+}
+.section-1-text > span > p{
+    text-align: left;
 }
 
-
 .section-1-image{
-    width: 50%;
-    margin-top:10%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.section-1-image > img {
+    margin-right: -10px;
     display:flex;
     justify-content: flex-end;
 }
@@ -284,13 +307,39 @@ h2.titulo-head-2{
     text-align: center;
 }
 
-.carrosel-company{
+.carousel-company{
     width:80%;
     height: 56vh;
     margin-left: 10%;
-    background-color: white;
+    margin-top: 0;
+    padding: 7% 10% 10% 10%;
 }
 
+.carousel-background{
+    height: 240px;
+    width: 240px;
+    background: #F2F2F2;
+    border: 10px solid #A7FFF3;
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+}
+
+.carousel-image{
+    
+}
+
+.carousel-depo{
+    font-style: italic;
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+}
+
+.carousel-depo-company{
+    text-align: left;
+    font-size: 1.2em;
+    color: white;
+}
 
 .section-6-title{
     font-family: PressStart2P;
@@ -325,6 +374,8 @@ h2.titulo-head-2{
     min-height: 100vh !important;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .section-5-cards-layout{
@@ -333,8 +384,7 @@ h2.titulo-head-2{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*flex-direction:row !important;
-    margin-top:5% !important;*/
+    padding-top: 0;
 }
 
 .section-5-text {
@@ -371,7 +421,6 @@ h2.titulo-head-2{
 }
 
 .section-7-title{
-    margin-top:10%;
     color: #828282;
     font-family: PressStart2P;
     font-size:2.5rem;
@@ -388,7 +437,7 @@ h2.titulo-head-2{
 
 
 .section-7-card{
-    width: 27%;
+    width: 23%;
     min-height: 90%;
     display: flex;
     align-items: center;
@@ -435,7 +484,6 @@ a.section-7-card-title:visited{
 }
 
 .section-8-title{
-    margin-top:2%;
     color:#D13B95;
     font-family: PressStart2P;
     font-size:2.5rem;
@@ -444,7 +492,6 @@ a.section-7-card-title:visited{
 
 .section-8-subtitle{
     color:#636363;
-    margin-top:4%;
 }
 
 .section-8-button{
@@ -506,7 +553,7 @@ a.section-7-card-title:visited{
 }
 
 .player-image{
-    border:8.92121px solid;
+    border: 8.92121px solid;
     box-sizing: border-box;
 }
 
@@ -582,133 +629,16 @@ li.section-4-list-item5::after{
 
 }
 
-
-
-@media only screen and (min-width: 600px) {
-    /* For tablets: */
-    h2.titulo-head-2{
-        top: 39%;
-    }
+@media (min-width:601px) and (max-width:768px){
+    /* for tablets */
 }
 
-@media (min-width:768px){
-    /* For desktop: */
-    .section1Oquee{
-        font-family:PressStart2P;
-        font-size:2.5rem;
-        color:#828282;
-        background-color: #FAFAFA !important;
-    }
-
-    .sectionTitleArea{
-        background-color: #FAFAFA !important;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top:5%;
-    }
-
-    .section1TextArea{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .section1Text{
-        text-align: justify;
-        width: 30%;
-    }
-    
-    .btn-eContato{
-        border-radius: 0;
-        font-size: 12px;
-        margin-top: -20px;
-        padding: 20px;
-        background-color: white;
-        color: gray;
-        transition: background-color 200ms linear;
-    }
-
-    .btn-eContato-scrolled{
-        border-radius: 0;
-        font-size: 12px;
-        margin-top: -20px;
-        padding: 20px;
-        background-color:  #3D5165;
-        color: white;
-        transition: background-color 200ms linear;
-    }
-
-    .section-1-text{
-        width:70%;
-        margin-top:2%;
-        text-align: left;
-        margin-left:20%;
-        color:#828282;
-        font-family: 'Sora',sans-serif !important;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.1rem;
-        margin-bottom: 10%!important;
-    }
-
-    .section-1-left{
-        margin-top:5%;
-    }
-
-    .section-5{
-        min-height: 100vh !important;
-    }
-
-    .section-5-cards-layout{
-        width: 100%;
-        height:45%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction:row !important;
-        margin-top:5% !important;
-    }
-
+@media (max-width:600px){
+    /* for phones */
 }
 
 
 
-@media only screen and (min-width: 359px){
-
-    .section-5{
-        min-height: 2600px ;
-        flex-direction: column;
-    }
-
-    .section-5-cards-layout{
-        flex-direction: column;
-        margin-top: 70%;
-    }
-
-    .section-5-card{
-        margin-top: 10%;
-    }
-
-    .player-image{
-         width: 100%;
-    }
-
-    .section-5-text{
-        margin-top: 60%;
-    }
-
-
-
-}
-
-@media only screen and (min-width: 494px) {
-    h2.titulo-head-2{
-        top: 39%;
-    }
-
-
-}
 
 @media (min-width:1025px){
     .navbar{
@@ -762,179 +692,4 @@ li.section-4-list-item5::after{
     }
 }
 
-
-@media(min-width: 1279px) {
-    .section-1-left{
-        margin-right: 10%;
-    }
-
-    .section-1-text{
-        width: 100%;
-        text-align: left;
-    }
-
-    .section-1-title{
-        margin-left: 3%;
-
-    }
-
-    .section-1{
-        height: 100vh;
-    }
-
-    .section-3-text-paragraph{
-        width:100%;
-        color:#828282;
-        font-family: 'Sora',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.1rem;
-    }
-
-    .section-3-text-title{
-        margin-bottom:4%;
-    }
-
-    .section-3-image{
-        width: 50%;
-    }
-    .section-3-text{
-        width: 45%;
-        text-align: left;
-        margin-top: 3%;
-        margin-right: 6%;
-        margin-bottom: 18%;
-    }
-
-    .section-3-title{
-        margin-left: 0% !important;
-    }
-
-    .section-4-text{
-        margin-bottom: 4%;
-    }
-
-    .section-4-text-title{
-        margin-left:45%;
-    }
-}
-
-@media(min-width: 1440px){
-
-
-
-    .section-1-left{
-
-        margin-top:6%;
-    }
-
-    .section-1{
-        height: 100vh;
-    }
-
-    .section-3-text-paragraph{
-        width:100%;
-        color:#828282;
-        font-family: 'Sora',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.2rem;
-        margin-bottom:40%;
-        text-align: left;
-    }
-
-    .section-3-text{
-        width: 40%;
-        margin-right: 6%;
-        margin-bottom: 3%;
-    }
-
-    .section-3-text-title{
-        font-family: PressStart2P;
-        font-size:2.5rem;
-        color:#828282;
-        margin-bottom:4%;
-    }
-
-    .section-1-text{
-        width:100%;
-        text-align: left;
-        margin-left:20%;
-        color:#828282;
-        font-family: 'Sora',sans-serif !important;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.2rem !important;
-        margin-bottom: 10%!important;
-    }
-
-    .section-1-title{
-        margin-left: 0%;
-        margin-right: 5%;
-    }
-
-    .section-4-text-title{
-        margin-left: 56%;
-    }
-
-    .section-4-text{
-        margin-bottom: 9%;
-    }
-}
-
-
-@media(min-width: 1920px){
-    .section-1-text{
-        width:80%;
-        margin-top:2%;
-        text-align: left;
-        margin-left:40%;
-        color:#828282;
-        font-family: 'Sora',sans-serif !important;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.3rem !important;
-        margin-bottom: 10%!important;
-    }
-
-    .section-1{
-        height: 100vh;
-    }
-
-    .section-4-text{
-        margin-bottom:0% !important;
-    }
-
-    .section-4-text-title{
-        margin-left: 68%;
-    }
-
-    .section-1-title{
-        font-family:PressStart2P;
-        font-size:2.5rem;
-        color:#828282;
-        background-color: #FAFAFA !important;
-        margin-right: 9% ;
-        margin-left: 30%;
-        opacity:0;
-    }
-
-    .section-3-text-paragraph{
-        width:65%;
-        color:#828282;
-        font-family: 'Sora',sans-serif;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.3rem;
-        margin-bottom: 20%;
-    }
-
-    .section-3-text-title{
-        font-family: PressStart2P;
-        font-size:2.5rem;
-        color:#828282;
-        margin-bottom:3%;
-    }
-
-}
 
