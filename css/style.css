@@ -31,6 +31,9 @@ p{
     font-family: Sora;
 }
 
+h3{
+    font-family: PressStart2P !important;
+}
 html {
     --scrollbarBG: #DCDCDC	;
     --thumbBG: #3D5165;
@@ -156,8 +159,8 @@ h2.titulo-head-2{
 }
 
 .section-1{
+    min-height: 765px;
     height: auto;
-    max-height: 100vh;
     width: 100%;
     background-color: #FAFAFA !important;
     display:flex;
@@ -166,19 +169,7 @@ h2.titulo-head-2{
 
 }
 
-.section-2{
-    height: auto;
-    width: 100%;
-    background-color: #3D5165 !important;
-    display:flex;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-}
 
-.section-2 > div > div>.img-responsive{
-    width: 100%;
-}
 
 .section-1-title{
     font-family:PressStart2P;
@@ -209,9 +200,24 @@ h2.titulo-head-2{
 }
 
 .section-1-image > img {
-    margin-right: -10px;
+    margin-right: -30px;
+    margin-top: 30px;
     display:flex;
     justify-content: flex-end;
+}
+
+.section-2{
+    height: auto;
+    width: 100%;
+    background-color: #3D5165 !important;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-2 > div > div>.img-responsive{
+    width: 100%;
 }
 
 .section-2-title{
@@ -238,16 +244,36 @@ h2.titulo-head-2{
 
 
 .section-3{
+    min-height: 765px !important;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
+    min-height: auto;
     background-color: #FAFAFA !important;
 }
 
+.section-3-text{
+    color:#828282;
+    font-family: 'Sora',sans-serif !important;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.1rem;
+    text-align: left;
+}
+.section-3-text > span > p{
+    text-align: left;
+}
+
 .section-3-image{
-    display: flex;
-    width: 60%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.section-3-image > img {
+    margin-left: -15px;
+    display:flex;
+    justify-content: flex-end;
 }
 
 .section-3-text{
@@ -360,7 +386,7 @@ h2.titulo-head-2{
     text-align: right;
 }
 
-.section-4-text-title{
+.section-4-title{
     font-family: PressStart2P;
     font-size:2.5rem;
     color:white;
@@ -628,18 +654,6 @@ li.section-4-list-item5::after{
     margin-left: 2%;
 
 }
-
-@media (min-width:601px) and (max-width:768px){
-    /* for tablets */
-}
-
-@media (max-width:600px){
-    /* for phones */
-}
-
-
-
-
 @media (min-width:1025px){
     .navbar{
         padding: 10px 100px 10px 100px;
@@ -679,17 +693,103 @@ li.section-4-list-item5::after{
         transition: background-color 200ms linear;
 
     }
-    .section-1-text{
-        width:80%;
+}
+
+@media (max-width:768px){
+    /* for phones and tablets */
+    .img-decor{
+        max-width: 10%;
+    }
+    .section-1-title{
         text-align: center;
-        color:#828282;
-        margin-right: 30%!important;
-        font-family: 'Sora',sans-serif !important;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 1.1rem !important;
-        margin-bottom: 10%!important;
+        font-size: 1.1rem;
+    }
+
+    .section-1-text-2{
+        font-size: 0.6rem;
+    }
+    .section-1-image > img {
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        align-self: center;
+        max-width: 75%;
+    }
+
+    .section-2-title{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .section-2-text{
+        font-size: 0.6rem;
+        margin: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+    .section-3{
+        min-height: 500px;
+    }
+
+    .section-3-title{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .section-3-text{
+        font-size: 0.6rem;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .section-3-image > img {
+        margin: 10%;
+        text-align: center;
+        align-self: center;
+        max-width: 75%;
+    }
+    
+    .section-4{
+        min-height: 500px;
+    }
+
+    .section-4-title{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .section-4-text{
+        font-size: 0.6rem;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .section-4-image > img {
+        margin: 10%;
+        text-align: center;
+        align-self: center;
+        max-width: 75%;
     }
 }
+@media (min-width:768px){
+    /* only desktops */
+    .section-1-image > img {
+        margin-right: -30px;
+        margin-top: 50px;
+        display:flex;
+        justify-content: flex-end;
+    }
+    .section-1-left{
+        margin-left: 25%;
+    }
+}
+@media (min-width:601px) and (max-width:768px){
+    /* for tablets */
+}
+
+@media (max-width:600px){
+    /* for phones */
+}
+
+
 
 
