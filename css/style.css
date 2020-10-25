@@ -718,7 +718,7 @@ li.section-4-list-item5::after{
     }
     .section-1-title{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .section-1-left {
@@ -745,7 +745,39 @@ li.section-4-list-item5::after{
     }
 
     .section-8{
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
     }
+    
+    .section-8-title{
+        color:#D13B95;
+        font-family: PressStart2P;
+        font-size:1.5rem;
+        padding: 25px;
+        margin: 10px;
+        text-align: center;
+    }
+    
+    
+    .section-8-subtitle{
+        color:#636363;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .section-8-button{
+        width: 50%;
+        height: 15%;
+    }
+
+    .section-8-text-button{
+        font-size: 1rem;
+    }
+    
 
     .section-7{
     }
@@ -802,7 +834,7 @@ li.section-4-list-item5::after{
     }
     .section-2-title{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .section-2-text{
@@ -818,7 +850,7 @@ li.section-4-list-item5::after{
 
     .section-3-title{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .section-3-text{
@@ -845,7 +877,7 @@ li.section-4-list-item5::after{
 
     .section-4-title{
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .section-4-text{
@@ -861,17 +893,43 @@ li.section-4-list-item5::after{
     }
 
     .section-4-image > img {
-        margin: 10%;
+        margin: 2%;
         text-align: center;
         align-self: center;
         max-width: 75%;
+    }
+    
+
+    .section-9{
+        width: 100%;
+        height: 10vh;
+        background: linear-gradient(90deg, #2B3E47 -5.17%, #D13B95 50.14%, #309A8C 97.93%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .section-9-center{
+        width:50%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+    }
+
+    .carousel-depo{
+        margin-top: 20px;
+    }
+    .section-5-text-title, .section-6-title, .section-7-title{
+        font-size: 1.5rem;
     }
 }
 @media (min-width:768px){
     /* only desktops */
     .section-1-image > img {
         margin-right: -30px;
-        margin-top: 50px;
+        margin-top: 30px;
         display:flex;
         justify-content: flex-end;
     }
@@ -893,6 +951,7 @@ li.section-4-list-item5::after{
         display:flex;
         justify-content: flex-end;
     }
+    
 }
 @media (min-width:601px) and (max-width:768px){
     /* for tablets */
