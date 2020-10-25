@@ -267,21 +267,16 @@ h2.titulo-head-2{
 
 .section-3-image{
     display:flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
-.section-3-image > img {
-    margin-left: -15px;
-    display:flex;
-    justify-content: flex-end;
-}
 
 .section-3-text{
-    width: 60%;
     display:flex;
     text-align: justify;
     flex-direction: column;
     margin-bottom:1%;
+    margin-right: 25%;
 }
 
 .section-3-text-paragraph{
@@ -290,7 +285,7 @@ h2.titulo-head-2{
     font-family: 'Sora',sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .section-3-text-title{
@@ -305,21 +300,12 @@ h2.titulo-head-2{
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
 }
 
 
 .section-4-text{
-    width: 40%;
-    display:flex;
-    text-align: justify;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 70%;
-    margin-right: 10%;
-    font-size: 1.1rem;
-
+    margin-left: 25%;
 }
 
 
@@ -382,16 +368,15 @@ h2.titulo-head-2{
 
 
 .section-4-image{
-    width:50%;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .section-4-title{
     font-family: PressStart2P;
-    font-size:2.5rem;
+    font-size:2rem;
     color:white;
-    margin-left: 58%;
-    margin-bottom: 4%;
+    text-align: right;
 }
 
 .section-5{
@@ -439,7 +424,7 @@ h2.titulo-head-2{
 
 .section-7{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -602,7 +587,6 @@ a.section-7-card-title:visited{
 
 
 .section-4-text-paragraph{
-    margin-bottom:53%;
     width:100%;
     color:#828282;
     font-family: 'Sora',sans-serif;
@@ -610,7 +594,6 @@ a.section-7-card-title:visited{
     text-align: right;
     font-weight: 300;
     color:white;
-    margin-left: 15%;
 }
 
 .section-4-text-list{
@@ -697,6 +680,39 @@ li.section-4-list-item5::after{
 
 @media (max-width:768px){
     /* for phones and tablets */
+    .section-5-cards-layout{
+        flex-direction: column;
+    }
+
+    .wordpress-pic{
+        width: 200px;
+        height: 200px;
+    }
+    .section-5-card{
+        margin-top:10%;
+    }
+
+
+    .section-4-image{
+        display: flex;
+        justify-content:center;
+        width: 100%;
+    }
+
+
+    .section-7-card-grid{
+        flex-direction: column;
+    }
+
+    .section-7-card{
+        width:80%;
+        margin-bottom:10%;
+    }
+
+    .player-image{
+        width: 200px;
+        height: 200px;
+    }
     .img-decor{
         max-width: 10%;
     }
@@ -705,17 +721,85 @@ li.section-4-list-item5::after{
         font-size: 1.1rem;
     }
 
+    .section-1-left {
+        text-align: center;
+    }
     .section-1-text-2{
         font-size: 0.6rem;
+        text-align: center;
     }
     .section-1-image > img {
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-right: 0 !important;
+        margin-top:0 !important; ;
         text-align: center;
         align-self: center;
         max-width: 75%;
     }
 
+    .section-1-text > span > p{
+        text-align: center;
+    }
+
+    .img-decor{
+        display: none;
+    }
+
+    .section-8{
+    }
+
+    .section-7{
+    }
+
+    .section-6{
+
+    }
+    .section-9{
+        display: none;
+    }
+
+    .section-5{
+    }
+
+    .section-3-image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .navbar-logo{
+        width:200px;
+        height: 200px;
+    }
+
+
+    .section-4-text-paragraph{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /*.section-3{
+        display: none;
+    }*/
+
+    /*.section-2{
+        display: none;
+    }*/
+
+    /*.section-1{
+        display: none;
+    }*/
+    .head{
+    }
+
+    /*.navbar{
+        display: none !important;
+    }*/
+    body{
+        max-width: 100%;
+    }
     .section-2-title{
         text-align: center;
         font-size: 1.1rem;
@@ -739,8 +823,8 @@ li.section-4-list-item5::after{
 
     .section-3-text{
         font-size: 0.6rem;
-        width: 90%;
-        margin-left: 5%;
+        width: 100%;
+        text-align: center;
     }
     .section-3-image > img {
         margin: 10%;
@@ -748,9 +832,15 @@ li.section-4-list-item5::after{
         align-self: center;
         max-width: 75%;
     }
+
+    .section-1-image{
+        width: 100%;
+        justify-content: center;
+    }
     
     .section-4{
-        min-height: 500px;
+        min-height: 950px !important;
+
     }
 
     .section-4-title{
@@ -760,9 +850,16 @@ li.section-4-list-item5::after{
 
     .section-4-text{
         font-size: 0.6rem;
-        width: 90%;
-        margin-left: 5%;
+        width: 100%;
+        text-align: center;
+        margin-left:0;
     }
+
+    .section-4-text-list{
+        text-align:center;
+        margin-left:0 !important;
+    }
+
     .section-4-image > img {
         margin: 10%;
         text-align: center;
@@ -780,6 +877,21 @@ li.section-4-list-item5::after{
     }
     .section-1-left{
         margin-left: 25%;
+    }
+
+    .section-3-image > img {
+        margin-top: 50px;
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    .section-4-image > img {
+        margin-right: -15px;
+        margin-top: 90px;
+        display:flex;
+        justify-content: flex-end;
     }
 }
 @media (min-width:601px) and (max-width:768px){
