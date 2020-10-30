@@ -319,6 +319,10 @@ h2.titulo-head-2{
     justify-content: flex-end;
 }
 
+.section-1-text-paragraph{
+    font-size: 1rem;
+}
+
 .section-2{
     height: auto;
     width: 100%;
@@ -525,15 +529,16 @@ h2.titulo-head-2{
     text-align: center;
 }
 
-.section-5-text-title{
+.section-5-title{
     font-family:PressStart2P;
     font-style: normal;
     font-weight: normal;
     font-size:2.5rem;
     color:#828282;
+    text-align: center !important;
 }
 
-.section-5-text-paragraph{
+.section-5-paragraph{
     margin-top:2%;
     width: 60%;
     margin-left: 20%;
@@ -568,7 +573,8 @@ h2.titulo-head-2{
 }
 
 
-.section-7-card{
+.section-7-card-1{
+    box-shadow: 6px 10px 10px rgb(43,62,71, 0.80);
     width: 23%;
     height: 500px !important;
     display: flex;
@@ -576,7 +582,31 @@ h2.titulo-head-2{
     justify-content: space-around;
     flex-direction: column;
     background-color: #FAFAFA;
-    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.25);
+    border: 5px solid rgb(43,62,71);
+    box-sizing: border-box;
+}
+
+.section-7-card-2{
+    box-shadow: 6px 10px 10px rgb(209,59,149, 0.80);
+    width: 23%;
+    height: 500px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    border: 5px solid  rgb(209,59,149);
+    box-sizing: border-box;
+}
+.section-7-card-3{
+    box-shadow: 6px 10px 10px rgb(48,154,140, 0.80);
+    width: 23%;
+    height: 500px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: #FAFAFA;
     border: 5px solid #309A8C;
     box-sizing: border-box;
 }
@@ -676,6 +706,44 @@ a.section-7-card-title:visited{
     font-style: normal;
     font-weight: normal;
     font-size: 0.8rem;
+}
+
+.section-10{
+    width: 100%;
+    min-height: 20vh;
+    height: auto;
+    background: #F2F2F2;
+    display: flex;
+}
+
+.section-11{
+    width: 100%;
+    min-height: 5vh;
+    height: auto;
+    background: #e9e9e9;
+    display: flex;
+}
+
+.section-11 > div> p, span{
+    color:#828282;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.section-10 > div> div> div> .item-footer{
+    color: #828282;
+    font-size: 1rem;
+    float: left;
+}
+
+.section-10 > div> div> div> p{
+    color: #828282;
+    font-size: 0.8rem;
+    clear: both;
+}
+
+.section-10 > div> div> .col-12{
+    display: inline-block;
 }
 
 .card-player{
@@ -862,7 +930,19 @@ li.section-4-list-item5::after{
         flex-direction: column;
     }
 
-    .section-7-card{
+    .section-7-card-1{
+        width:80%;
+        margin-bottom:10%;
+        height: 500px !important;
+    }
+
+    .section-7-card-2{
+        width:80%;
+        margin-bottom:10%;
+        height: 500px !important;
+    }
+
+    .section-7-card-3{
         width:80%;
         margin-bottom:10%;
         height: 500px !important;

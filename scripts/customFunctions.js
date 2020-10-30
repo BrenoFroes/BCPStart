@@ -39,11 +39,12 @@ function blink(elem,ms){
 }
 
 function loadNews(){
+    var i;
     $.get('http://bcpadvogados.com.br/wp-json/wp/v2/posts?per_page=3&_embed',function (data) {
         for(item of data){
-            console.log(item);
+            var i = data.indexOf(item) + 1;
             $('.section-7-card-grid').append(`
-                <div class="section-7-card">
+                <div class="section-7-card-${i}">
                     <img style="margin-top:10%" class="wordpress-pic" src="images/Rectangle.png"/>
                      <div style="width: 60%">
                         <a target="_blank" href="${item.link}" class="section-7-card-title">${item.title.rendered}</a>
