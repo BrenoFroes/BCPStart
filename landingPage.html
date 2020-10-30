@@ -15,7 +15,7 @@
     <a class="navbar-brand" href="#">
         <img src="images/logoBranco.svg" class="navbar-logo" width="200" height="200" alt="">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    <button class="navbar-toggler toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,7 +28,7 @@
             <a class="nav-item nav-link" href="#section5">QUEM SOMOS?</a>
             <a class="nav-item nav-link" href="#section6">QUEM ENTROU NO JOGO?</a>
             <a class="nav-item nav-link">
-                <button type="button" class="btn btn-light btn-eContato">ENTRAR EM CONTATO</button>
+                <button id="contatar" type="button" class="btn btn-light btn-eContato">ENTRAR EM CONTATO</button>
             </a>
         </div>
     </div>
@@ -40,7 +40,38 @@
         PRESS START
     </h2>
 </div>
-
+<div class="bcpModal">
+    <div class="bcpModalHeader">
+        <span class="modalCloseButton">X</span>
+        <div class="modalSubHeaderText">
+            <span class="modalHeaderText">Fale conosco!<br> Retornaremos seu contato o quanto <br>antes.</span>
+        </div>
+        <div class="modalBody">
+            <div class="modalFormSpace">
+                <label>Nome:</label>
+                <input id="nome" name="nome" type="text">
+            </div>
+            <div class="modalFormSpace">
+                <label>Assunto:</label>
+                <input id="assunto" name="assunto" type="text">
+            </div>
+            <div class="modalFormSpace">
+                <label>E-mail:</label>
+                <input id="email" name="email" type="text">
+            </div>
+            <div class="modalFormSpace">
+                <label>Mensagem:</label>
+                <textarea id="mensagem" name="mensagem"></textarea>
+            </div>
+            <div class="sendModalButton">
+                <span id="enviar">Enviar</span>
+                <div class="spinner-border text-light" role="status">
+                    <span class="sr-only">Carregando...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="section-1" id="section1">
     <img style="position:absolute;left:8%" class="img-decor" src="images/pixel1.svg"/>
     <img style="position: absolute;right: 8%" class="img-decor" src="images/pixel2.svg"/>

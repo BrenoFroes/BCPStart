@@ -70,6 +70,119 @@ body::-webkit-scrollbar-thumb {
     font-size: 12px;
 }
 
+.bcpModal{
+    width: 50%;
+    height: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color:#F2F2F2;
+    z-index: 9999999;
+    border: 2px solid #BDBDBD;
+    box-sizing: border-box;
+    box-shadow: 4.70926px 3.1395px 7.84876px rgba(0, 0, 0, 0.25);
+    transition: display 0.8s;
+
+}
+
+.bcpModalHeader{
+    width: 100%;
+    height:20%;
+    background-color: #F2F2F2;
+}
+
+input[type=text]{
+    height: 50px;
+    border-width: 0px;
+}
+
+label{
+    color:#828282;
+}
+
+textarea{
+    height: 130px;
+    border-width: 0px;
+    resize: none;
+}
+
+.sendModalButton{
+    width: 30%;
+    height: 50px;
+    margin-top:2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    background-color:#309A8C ;
+    cursor: pointer;
+}
+
+@keyframes spinner-border {
+    to { transform: rotate(360deg); }
+}
+.spinner-border{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: .25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: spinner-border .75s linear infinite;
+}
+.spinner-border-sm{
+    height: 1rem;
+    border-width: .2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.modalBody{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modalFormSpace{
+    display: flex;
+    margin-top:2%;
+    flex-direction: column;
+    width:70%;
+    height:15%;
+}
+
+.modalCloseButton{
+    margin-left: 97%;
+    font-family: PressStart2P;
+    color: rgba(0,0,0,.5);
+    cursor:pointer;
+    transition: color 0.3s;
+}
+
+.modalCloseButton:hover{
+    color:red;
+    transition: color 0.3s;
+}
+
+.modalHeaderText{
+    color: #828282;
+    font-family: 'PressStart2P';
+    font-size:1rem;
+
+}
+
 .navbar-logo{
     max-width: 300px;
     max-height: 87px;
@@ -372,6 +485,14 @@ h2.titulo-head-2{
     justify-content: flex-end;
 }
 
+.modalSubHeaderText{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .section-4-title{
     font-family: PressStart2P;
     font-size:2rem;
@@ -449,7 +570,7 @@ h2.titulo-head-2{
 
 .section-7-card{
     width: 23%;
-    min-height: 90%;
+    height: 500px !important;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -684,6 +805,43 @@ li.section-4-list-item5::after{
         flex-direction: column;
     }
 
+    .bcpModal{
+        width: 98%;
+        height: 98%;
+    }
+
+    .bg-light-scrolled {
+        background-color: #F2F2F2 !important;
+        transition: background-color 200ms linear;
+    }
+
+    .bg-light {
+        background-color: transparent !important;
+        transition: background-color 200ms linear;
+    }
+
+    .toggler{
+        color: white !important;
+    }
+
+    .modalHeaderText{
+        font-size: 0.7rem;
+        margin-left: 8%;
+    }
+
+    .modalCloseButton{
+        margin-left: 94%;
+    }
+
+    .modalFormSpace{
+        width: 90%;
+    }
+
+    .modalSubHeaderText{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
     .wordpress-pic{
         width: 200px;
         height: 200px;
@@ -707,6 +865,7 @@ li.section-4-list-item5::after{
     .section-7-card{
         width:80%;
         margin-bottom:10%;
+        height: 500px !important;
     }
 
     .player-image{

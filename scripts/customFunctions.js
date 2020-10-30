@@ -4,14 +4,17 @@ function changeMenuColor() {
     let navLink = $('.nav-link');
     let btnContato = $('.btn-eContato');
     let logoMenu = $('.navbar-logo');
+    let toggler = $('.navbar-toggler');
     if (janela == 0) {
         nav.removeClass('bg-light-scrolled');
         nav.addClass('bg-light');
         navLink.removeClass('nav-link-scrolled');
         btnContato.removeClass('btn-eContato-scrolled');
+        toggler.addClass('toggler');
         logoMenu.attr('src','images/logoBranco.svg');
         return;
     }
+    toggler.removeClass('toggler');
     nav.removeClass('bg-light');
     nav.addClass('bg-light-scrolled');
     navLink.addClass('nav-link-scrolled');
@@ -54,6 +57,54 @@ function loadNews(){
 }
 
 $(document).ready(()=>{
+  let bcpModal = $('.bcpModal');
+  let modalCloseButton  = $('.modalCloseButton');
+  let contatar = $('#contatar');
+  let enviar = $('.sendModalButton');
+  let spinner = $('.spinner-border');
+
+  spinner.hide();
+  bcpModal.hide();
+  contatar.click(()=>{
+    bcpModal.show(200);
+  });
+
+  modalCloseButton.click(()=>{
+    console.log('rodei');
+    bcpModal.hide(200);
+  });
+
+  enviar.click(()=>{
+        let nome = $('#nome').val();
+        let assunto = $('#assunto').val();
+        let email = $('#email').val();
+        let mensagem = $('#mensagem').val();
+        $('#enviar').hide();
+        spinner.show();
+        console.log(nome);
+        console.log(assunto);
+        console.log(email);
+        console.log(mensagem);
+        $.post('http://bcpadvogados.com.br/wp-json/contact-form-7/v1/contact-forms/228/feedback',{
+            "_wpcf7": 228,
+            "_wpcf7_version": "5.1.7",
+            "_wpcf7_locale": "pt_PT",
+            "_wpcf7_unit_tag": "wpcf7-f228-p204-o1",
+            "_wpcf7_container_post": 204,
+            "your-name": nome,
+            "your-email": email,
+            "your-subject": assunto,
+            "your-message": mensagem
+        },(response)=>{
+            spinner.hide();
+            $('#enviar').show();
+            alert(response.message);
+        });
+
+
+  });
+
+
   blink('.titulo-head',500);
   loadNews();
 })
