@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .bcpModal{
-    width: 50%;
+    width: 40%;
     height: 90%;
     position: fixed;
     top: 50%;
@@ -117,6 +117,7 @@ textarea{
     color:white;
     background-color:#309A8C ;
     cursor: pointer;
+    float: right;
 }
 
 @keyframes spinner-border {
@@ -138,18 +139,9 @@ textarea{
     border-width: .2em;
 }
 
-
-
-
-
-
-
-
-
-
-
 .modalBody{
     width: 100%;
+    padding: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -253,7 +245,7 @@ h2.titulo-head:after{
     content:'PRESS START';
     z-index: -1;
     position: absolute;
-    left: 38%;
+    left: 35%;
     top: 23%;
     font-family: "PressStart2P", PressStart2P, sans-serif;
     font-style: normal;
@@ -267,9 +259,6 @@ h2.titulo-head:after{
 
 }
 
-h2.titulo-head-2{
-
-}
 
 .section-1{
     min-height: 765px;
@@ -289,7 +278,6 @@ h2.titulo-head-2{
     font-size:2.0rem;
     color:#828282;
     background-color: #FAFAFA !important;
-    opacity:0;
     text-align: left;
     margin: 0;
     padding: 0;
@@ -370,7 +358,7 @@ h2.titulo-head-2{
     background-color: #FAFAFA !important;
 }
 
-.section-3-text{
+.section-3-area{
     color:#828282;
     font-family: 'Sora',sans-serif !important;
     font-style: normal;
@@ -438,10 +426,11 @@ h2.titulo-head-2{
 
 .carousel-company{
     width:80%;
-    height: 56vh;
+    min-height: 56vh;
+    height: auto;
     margin-left: 10%;
     margin-top: 0;
-    padding: 7% 10% 10% 10%;
+    padding: 0 10% 10% 10%;
 }
 
 .carousel-background{
@@ -546,6 +535,7 @@ h2.titulo-head-2{
     font-style: normal;
     font-weight: 300;
     color:#828282;
+    font-size: 1rem;
 }
 
 .section-7{
@@ -654,6 +644,7 @@ a.section-7-card-title:visited{
 
 .section-8-subtitle{
     color:#636363;
+    font-size: 1rem;
 }
 
 .section-8-button{
@@ -826,6 +817,11 @@ li.section-4-list-item5::after{
     margin-left: 2%;
 
 }
+
+.sendModalButton > #enviar{
+    color: white;
+}
+
 @media (min-width:1025px){
     .navbar{
         padding: 10px 100px 10px 100px;
@@ -894,7 +890,6 @@ li.section-4-list-item5::after{
 
     .modalHeaderText{
         font-size: 0.7rem;
-        margin-left: 8%;
     }
 
     .modalCloseButton{
@@ -1017,18 +1012,8 @@ li.section-4-list-item5::after{
         font-size: 1rem;
     }
     
-
-    .section-7{
-    }
-
-    .section-6{
-
-    }
     .section-9{
         display: none;
-    }
-
-    .section-5{
     }
 
     .section-3-image{
@@ -1051,23 +1036,6 @@ li.section-4-list-item5::after{
         flex-direction: column;
     }
 
-    /*.section-3{
-        display: none;
-    }*/
-
-    /*.section-2{
-        display: none;
-    }*/
-
-    /*.section-1{
-        display: none;
-    }*/
-    .head{
-    }
-
-    /*.navbar{
-        display: none !important;
-    }*/
     body{
         max-width: 100%;
     }
@@ -1158,10 +1126,24 @@ li.section-4-list-item5::after{
     }
 
     .carousel-depo{
+        margin: 0;
         margin-top: 20px;
     }
     .section-5-text-title, .section-6-title, .section-7-title{
         font-size: 1.5rem;
+    }
+
+    h2.titulo-head:after{
+        position: absolute;
+        left: 5% !important;
+        top: 12% !important;
+    }
+
+    .section-5-title{
+        font-size:1.5rem;
+    }
+    .section-5-paragraph{
+        font-size: 0.6rem;
     }
 }
 @media (min-width:768px){

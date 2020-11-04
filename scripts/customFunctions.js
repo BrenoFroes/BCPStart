@@ -104,16 +104,17 @@ $(document).ready(()=>{
 
 
   });
-
-
   blink('.titulo-head',500);
   loadNews();
 })
 $(document).scroll(() => {
     changeMenuColor();
-    isElementVisible('.section-1-title',1000);
-    isElementVisible('.section-1-text',1200);
-    isElementVisible('.section-1-image',1500);
+    // isElementVisible('.section-1-title',1000);
+    // isElementVisible('.section-1-text',1200);
+    // isElementVisible('.section-2-title',1000);
+    // isElementVisible('.section-2-text',1200);
+    // isElementVisible('.section-3-title',1000);
+    // isElementVisible('.section-3-text',1200);
 
 });
 
