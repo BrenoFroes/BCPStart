@@ -47,7 +47,7 @@ function loadNews(){
             var i = data.indexOf(item) + 1;
             $('.section-7-card-grid').append(`
                 <div class="section-7-card-${i}">
-                    <img style="margin-top:10%" class="wordpress-pic" src="images/Rectangle.png"/>
+                    <img style="margin-top:10%" class="img-responsive wordpress-pic" src="images/quad${i}.jpg"/>
                      <div style="width: 60%">
                         <a target="_blank" href="${item.link}" class="section-7-card-title">${item.title.rendered}</a>
                      </div>

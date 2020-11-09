@@ -670,6 +670,8 @@ a.section-7-card-title:visited{
     align-items: center;
     justify-content: center;
     margin-top:4%;
+    width: 25%;
+    height: 20%;
     border-image-source: linear-gradient(90deg, #2B3E47 -5.17%, #D13B95 50.14%, #309A8C 97.93%);
     cursor: pointer;
 
