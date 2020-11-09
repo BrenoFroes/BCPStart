@@ -61,11 +61,23 @@ body::-webkit-scrollbar-thumb {
     padding: 10px 10px 10px 10px;
 }
 
-.nav-link {
+.navbar-toggler{
+    background-color: #F2F2F2;
+}
+
+.nav-link-default {
     padding-right: .3rem !important;
     padding-left: .3rem !important;
     margin: .4rem;
-    color: gray !important;
+    color: white !important;
+    font-weight: 300;
+    font-size: 12px;
+}
+.nav-link-scrolled {
+    padding-right: .3rem !important;
+    padding-left: .3rem !important;
+    margin: .4rem;
+    color: #828282 !important;
     font-weight: 300;
     font-size: 12px;
 }
@@ -151,7 +163,7 @@ textarea{
     display: flex;
     margin-top:2%;
     flex-direction: column;
-    width:70%;
+    width:90%;
     height:15%;
 }
 
@@ -205,6 +217,7 @@ textarea{
 
 .img-responsive{
     max-width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 .btn-eContato{
     border-radius: 0;
@@ -308,7 +321,7 @@ h2.titulo-head:after{
 }
 
 .section-1-text-paragraph{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .section-2{
@@ -323,6 +336,7 @@ h2.titulo-head:after{
 
 .section-2 > div > div>.img-responsive{
     width: 100%;
+    box-shadow: none !important;
 }
 
 .section-2-title{
@@ -449,13 +463,13 @@ h2.titulo-head:after{
 .carousel-depo{
     font-style: italic;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 0.8em;
     color: white;
 }
 
 .carousel-depo-company{
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
 }
 
@@ -541,6 +555,7 @@ h2.titulo-head:after{
 .section-7{
     width: 100%;
     min-height: 100vh;
+    height: auto;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
@@ -654,8 +669,6 @@ a.section-7-card-title:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    width:30%;
-    height: 20%;
     margin-top:4%;
     border-image-source: linear-gradient(90deg, #2B3E47 -5.17%, #D13B95 50.14%, #309A8C 97.93%);
     cursor: pointer;
@@ -842,7 +855,7 @@ li.section-4-list-item5::after{
         z-index: 99;
     }
 
-    .nav-link {
+    .nav-link-default {
         padding: 1rem .4rem 0 .4rem !important;
         margin: .4rem;
         color: #ffffff !important;
@@ -859,7 +872,6 @@ li.section-4-list-item5::after{
         font-weight: 300;
         font-size: 12px;
         transition: background-color 200ms linear;
-
     }
 }
 
@@ -871,7 +883,7 @@ li.section-4-list-item5::after{
 
     .bcpModal{
         width: 98%;
-        height: 98%;
+        min-height: auto;
     }
 
     .bg-light-scrolled {
@@ -880,7 +892,7 @@ li.section-4-list-item5::after{
     }
 
     .bg-light {
-        background-color: transparent !important;
+        background-color: rgba(0, 0, 0, 0.25) !important;
         transition: background-color 200ms linear;
     }
 
@@ -979,7 +991,7 @@ li.section-4-list-item5::after{
     }
 
     .section-8{
-        height: 70vh;
+        min-height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -990,7 +1002,7 @@ li.section-4-list-item5::after{
         color:#D13B95;
         font-family: PressStart2P;
         font-size:1.5rem;
-        padding: 25px;
+        padding: 5px;
         margin: 10px;
         text-align: center;
     }
@@ -998,14 +1010,14 @@ li.section-4-list-item5::after{
     
     .section-8-subtitle{
         color:#636363;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         text-align: center;
         margin: 10px;
     }
 
     .section-8-button{
-        width: 50%;
-        height: 15%;
+        width: 70%;
+        height: 12%;
     }
 
     .section-8-text-button{
@@ -1045,7 +1057,7 @@ li.section-4-list-item5::after{
     }
 
     .section-2-text{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         margin: 0;
         margin-left: 10%;
         margin-right: 10%;
@@ -1061,7 +1073,7 @@ li.section-4-list-item5::after{
     }
 
     .section-3-text{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         width: 100%;
         text-align: center;
     }
@@ -1098,14 +1110,19 @@ li.section-4-list-item5::after{
         text-align:center;
         margin-left:0 !important;
     }
-
+    .section-4-text-list > li{
+        font-size: 0.8rem;
+    }
     .section-4-image > img {
         margin: 2%;
         text-align: center;
         align-self: center;
         max-width: 75%;
     }
-    
+
+    .section-4-text-paragraph> p{
+        font-size: 0.8rem;
+    }
 
     .section-9{
         width: 100%;
@@ -1143,7 +1160,7 @@ li.section-4-list-item5::after{
         font-size:1.5rem;
     }
     .section-5-paragraph{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 }
 @media (min-width:768px){

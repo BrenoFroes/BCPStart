@@ -1,7 +1,7 @@
 function changeMenuColor() {
     let janela = $(window).scrollTop();
     let nav = $('#nav');
-    let navLink = $('.nav-link');
+    let navLink = $('.nav-item');
     let btnContato = $('.btn-eContato');
     let logoMenu = $('.navbar-logo');
     let toggler = $('.navbar-toggler');
@@ -9,6 +9,7 @@ function changeMenuColor() {
         nav.removeClass('bg-light-scrolled');
         nav.addClass('bg-light');
         navLink.removeClass('nav-link-scrolled');
+        navLink.addClass('nav-link-default');
         btnContato.removeClass('btn-eContato-scrolled');
         toggler.addClass('toggler');
         logoMenu.attr('src','images/logoBranco.svg');
@@ -18,6 +19,7 @@ function changeMenuColor() {
     nav.removeClass('bg-light');
     nav.addClass('bg-light-scrolled');
     navLink.addClass('nav-link-scrolled');
+    navLink.removeClass('nav-link-default');
     btnContato.addClass('btn-eContato-scrolled');
     logoMenu.attr('src','images/logoGradiente.svg');
 }
