@@ -274,8 +274,7 @@ h2.titulo-head:after{
 
 
 .section-1{
-    min-height: 765px;
-    height: auto;
+    min-height: auto;
     width: 100%;
     background-color: #FAFAFA !important;
     display:flex;
@@ -321,7 +320,7 @@ h2.titulo-head:after{
 }
 
 .section-1-text-paragraph{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .section-2{
@@ -379,6 +378,7 @@ h2.titulo-head:after{
     font-weight: 300;
     font-size: 1.1rem;
     text-align: left;
+    margin-left: -100px;
 }
 .section-3-text > span > p{
     text-align: left;
@@ -417,7 +417,7 @@ h2.titulo-head:after{
 .section-4{
     background-color: #309A8C;
     width: 100%;
-    height: 100vh;
+    min-height: auto;
     display: flex;
     justify-content: flex-end;
 }
@@ -431,7 +431,7 @@ h2.titulo-head:after{
 
 .section-6{
     width:100%;
-    height: 100vh;
+    min-height: auto;
     background-color: #D13B95;
     display: flex;
     flex-direction: column;
@@ -440,8 +440,7 @@ h2.titulo-head:after{
 
 .carousel-company{
     width:80%;
-    min-height: 56vh;
-    height: auto;
+    min-height: auto;
     margin-left: 10%;
     margin-top: 0;
     padding: 0 10% 10% 10%;
@@ -463,13 +462,13 @@ h2.titulo-head:after{
 .carousel-depo{
     font-style: italic;
     text-align: left;
-    font-size: 0.8em;
+    font-size: 1.1em;
     color: white;
 }
 
 .carousel-depo-company{
     text-align: left;
-    font-size: 1em;
+    font-size: 1.2em;
     color: white;
 }
 
@@ -504,13 +503,13 @@ h2.titulo-head:after{
     font-family: PressStart2P;
     font-size:2rem;
     color:white;
-    text-align: right;
+    text-align: left;
 }
 
 .section-5{
     background-color: #FAFAFA !important;
     width: 100%;
-    min-height: 100vh !important;
+    min-height: auto !important;
     display: flex;
     flex-direction: column;
     padding-top: 0;
@@ -519,7 +518,7 @@ h2.titulo-head:after{
 
 .section-5-cards-layout{
     width: 100%;
-    height:45%;
+    min-height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -786,7 +785,7 @@ a.section-7-card-title:visited{
     color:#828282;
     font-family: 'Sora',sans-serif;
     font-style: normal;
-    text-align: right;
+    text-align: left;
     font-weight: 300;
     color:white;
 }
@@ -1083,7 +1082,7 @@ li.section-4-list-item5::after{
         margin: 10%;
         text-align: center;
         align-self: center;
-        max-width: 75%;
+        max-width: 100%;
     }
 
     .section-1-image{
@@ -1178,7 +1177,7 @@ li.section-4-list-item5::after{
     }
 
     .section-3-image > img {
-        margin-top: 50px;
+        margin-top: 20px;
         display:flex;
         justify-content: flex-start;
         align-items: flex-start;
